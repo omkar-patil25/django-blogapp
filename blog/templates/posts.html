@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blogify</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article {
+  background-color: white;
+  padding: 20px;
+  width: 30%;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add media query for responsive design */
+@media only screen and (max-width: 768px) {
+  article {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Blogify</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="row">
+        <div class="leftcolumn">
+        <div class="card">
+      
+          <h2>{{posts.title}}</h2>
+          <h5>{{posts.created_at}}</h5>
+          <p>{{posts.body}}</p>
+        
+    </div>
+    </div>
+  </div>
+  </main>
+  
+</body>
+<footer>
+    <p>Copyright &copy; 2023 Omkar Patil @ Blogify</p>
+</footer>
+</html>
